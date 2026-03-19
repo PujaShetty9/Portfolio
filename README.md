@@ -56,7 +56,6 @@ The portfolio reflects my expertise in building **scalable, real-world web appli
 ## 📫 Connect with Me
 
 * 💼 LinkedIn: https://www.linkedin.com/in/pujashetty/
-* 💻 GitHub: https://github.com/PujaShetty9
 
 ---
 
