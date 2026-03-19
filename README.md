@@ -16,10 +16,15 @@ The portfolio reflects my expertise in building **scalable, real-world web appli
 ## 🚀 Features
 
 ✨ Responsive and modern UI
+
 ✨ Dynamic project showcase
+
 ✨ Integrated CMS dashboard
+
 ✨ Image upload functionality
+
 ✨ Clean and user-friendly design
+
 ✨ Dark Mode
 
 ---
