@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🔥 GLOBAL DARK MODE STYLES */
+html {
+  @apply bg-white text-black transition-colors duration-300;
+}
+
+html.dark {
+  @apply bg-black text-white transition-colors duration-300;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-up animation */
+.fade-up-animation {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.fade-up-animation.delay-200 {
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Profile image hover animation */
+img[alt="Puja Shetty"] {
+  transition: transform 0.35s ease;
+}
+
+.group:hover img[alt="Puja Shetty"] {
+  transform: scale(1.02);
+}
+
+/* Social buttons */
+.social-btn {
+  @apply w-10 h-10 rounded-xl flex items-center justify-center text-white 
+         bg-purple-600 hover:bg-purple-700 transition text-lg;
+}
+
+/* 3D card tilt effect */
+.card-tilt {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-style: preserve-3d;
+}
+
+.card-tilt:hover {
+  transform: perspective(900px) rotateX(4deg) rotateY(4deg) translateY(-6px);
+}
+
+/* Contact inputs */
+.contact-input {
+  @apply w-full px-5 py-3 rounded-xl
+    bg-white dark:bg-gray-900
+    border border-gray-300 dark:border-gray-700
+    focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white
+    transition;
+}
