@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API = "http://localhost:5000/api";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const Admin = () => {
 
@@ -37,12 +37,12 @@ const Admin = () => {
   }, []);
 
   const fetchProjects = async () => {
-    const res = await fetch(`${API}/projects`);
+    const res = await fetch(`${API_URL}/projects`);
     setProjects(await res.json());
   };
 
   const fetchSkills = async () => {
-    const res = await fetch(`${API}/skills`);
+    const res = await fetch(`${API_URL}/skills`);
     setSkills(await res.json());
   };
 
@@ -51,8 +51,8 @@ const Admin = () => {
     e.preventDefault();
 
     const url = editingProjectId
-      ? `${API}/projects/${editingProjectId}`
-      : `${API}/projects`;
+      ? `${API_URL}/projects/${editingProjectId}`
+      : `${API_URL}/projects`;
 
     const method = editingProjectId ? "PUT" : "POST";
 
@@ -90,7 +90,7 @@ const Admin = () => {
   };
 
   const deleteProject = async (id) => {
-    await fetch(`${API}/projects/${id}`, { method: "DELETE" });
+    await fetch(`${API_URL}/projects/${id}`, { method: "DELETE" });
     fetchProjects();
   };
 
@@ -99,8 +99,8 @@ const Admin = () => {
     e.preventDefault();
 
     const url = editingSkillId
-      ? `${API}/skills/${editingSkillId}`
-      : `${API}/skills`;
+      ? `${API_URL}/skills/${editingSkillId}`
+      : `${API_URL}/skills`;
 
     const method = editingSkillId ? "PUT" : "POST";
 
@@ -125,7 +125,7 @@ const Admin = () => {
   };
 
   const deleteSkill = async (id) => {
-    await fetch(`${API}/skills/${id}`, { method: "DELETE" });
+    await fetch(`${API_URL}/skills/${id}`, { method: "DELETE" });
     fetchSkills();
   };
 
