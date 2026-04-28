@@ -20,10 +20,10 @@ const Contact = () => {
         e.preventDefault();
         setLoading(true);
         setError("");
-    const API_URL = import.meta.env.VITE_API_URL;
+    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
         try {
-            const res = await fetch(`${API_URL}/contact`, {
+            const res = await fetch(`${API_URL}/api/contact`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
