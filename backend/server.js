@@ -13,7 +13,7 @@ const app = express();
 
 /* ---------------- MIDDLEWARE ---------------- */
 app.use(cors({
-  origin: "http://localhost:5173", // Vite frontend
+  origin: ["http://localhost:5173", "https://portfolio-hb03qayog-pujashetty92006-2194s-projects.vercel.app"],
   methods: ["GET", "POST", "PUT", "DELETE"]
 }));
 app.use(express.json());
